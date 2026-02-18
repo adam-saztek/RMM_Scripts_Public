@@ -1,4 +1,5 @@
 #Last changed here: 2025-08-03
+#Description: It's not uncommon for a MSP to have their own folder in c:\ for RMM management purposes.  This script creates the basic folder structure.
 
 $itsupportFolders = @(
 'C:\itsupport'
@@ -20,4 +21,5 @@ foreach ($currentFolder in $itsupportFolders)
 	{
 		Write-Host "INFO $currentFolder folder exists"
 	}
+
 }
