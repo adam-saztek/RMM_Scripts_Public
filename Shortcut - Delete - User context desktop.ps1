@@ -1,4 +1,5 @@
 #Last changed here: 2026-01-22
+#Description: Deletes files, shortcuts, links from a user's desktop.  Script needs to be run in the user context.
 
 #Get User Desktop Folder
 $userDesktopFolder = [Environment]::GetFolderPath("Desktop")
