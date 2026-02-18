@@ -1,4 +1,5 @@
 #Last changed here: 2025-06-30
+#Description: Can be used to reboot devices based off of certain criteria, such as name, number of days since last reboot, type of device
 
 #Workstation name
 $workstationName = $env:computerName
