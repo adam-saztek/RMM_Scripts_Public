@@ -1,4 +1,6 @@
 #Last changed here: 2025-03-07
+#Description: Gets the status and recovery password for the C drive of a workstation and populates that information to Syncro assess fields, so they appear in the workstation's page in Syncro.
+#Also creates a Syncro alert if Bitlocker is not enabled.
 
 Import-Module $env:SyncroModule
 
