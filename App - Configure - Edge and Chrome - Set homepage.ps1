@@ -1,4 +1,5 @@
 #Last changed here: 2025-03-11
+#Description: Sets the default startup page for Edge and Chrome.  For a company Intranet, for instance.
 
 #Intranet URL
 $homepageURL = "https://somewebsite.com/go/to/this/page"
