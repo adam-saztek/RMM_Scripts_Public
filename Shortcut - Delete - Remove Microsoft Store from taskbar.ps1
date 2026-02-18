@@ -1,4 +1,5 @@
 #Last changed here: 2025-04-27
+#Description: Removes the Microsoft Store icon from the Windows 11 taskbar.
 
 Import-Module $env:SyncroModule
 
@@ -40,4 +41,5 @@ if (-not $registryValueExists)
 else
 {
     Set-ItemProperty -Path $registryKeyName -Name $registryValueName -Value $registryValueData
+
 }
