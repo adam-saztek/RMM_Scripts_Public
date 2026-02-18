@@ -1,0 +1,22 @@
+#Last changed here: 2024-12-19
+
+#NOTE: $newComputerName is supplied as Sycro Script Variables
+
+if ((Get-WmiObject Win32_ComputerSystem).Domain -eq 'domain.local')
+{
+    Write-Host "STATUS: Workstation on domain"
+    Write-Host "STATUS: Renaming"
+
+    $domainUser = 'domain.local\admin'
+    $domainPassword = 'password'
+
+    $securePassword = ConvertTo-SecureString $domainPassword -AsPlainText -Force
+    $domainCredentials = New-Object System.Management.Automation.PSCredential ($domainUser, $securePassword)
+
+    Rename-Computer -NewName "$newComputerName" -DomainCredential $domainCredentials -Restart -Force
+
+}
+else {
+    Write-Host "STATUS: Workstation not on domain"
+    Rename-Computer -NewName "$newComputerName" -Restart
+}
