@@ -1,4 +1,5 @@
 #Last changed here: 2025-08-22
+#Application installer.  Works with .msi files and .exes that have a silent install option.
 
 $applicationName = "Application Name"
 $installerFilename = "ApplicationInstaller.exe"
