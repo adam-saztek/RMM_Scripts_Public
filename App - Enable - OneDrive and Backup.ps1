@@ -1,4 +1,6 @@
 #Last changed here: 2024-12-19
+#Description: Turns on OneDrive and enables the backup feature (desktop, documents, etc).
+#It doesn't work correctly if the user has both a company and personal Microsoft account using the same email address.
 
 if ((Get-WmiObject Win32_OperatingSystem).Caption -Match "Windows 11") {
     Write-Host "OS: Windows 11"
