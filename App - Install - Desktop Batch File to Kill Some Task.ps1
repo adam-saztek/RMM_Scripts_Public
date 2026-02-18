@@ -1,4 +1,5 @@
 #Last changed here: 2025-04-27
+#Puts a .bat file on the All Users desktop to kill a running task.  The idea is that if you have a flaky program that locks up, the user can kill it easily by double-clicking the .bat.
 
 Import-Module $env:SyncroModule
 
