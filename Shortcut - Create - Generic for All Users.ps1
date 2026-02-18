@@ -1,4 +1,5 @@
 #Last changed here: 2025-12-15
+#Description: Creates a URL shortcut on the All User desktop.  Assumes you have a .ico icon file copied over by Syncro to apply to it so it doesn't use a generic Windows icon.
 
 $shotcutURLDestination = "https:/somewebsite.com"
 $shortcutFilename = "Somewebsite.url"
