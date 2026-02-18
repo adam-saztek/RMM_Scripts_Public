@@ -1,4 +1,5 @@
 #Last changed here: 2025-10-07
+#Description: Removes the Task View button from Windows 11 taskbar
 
 #Check if it is a valid computer (Win 11)
 if ((Get-WmiObject Win32_OperatingSystem).Caption -Match "Windows 11") {
@@ -22,4 +23,5 @@ if ($existingValue -eq 0) {
 } else {
     New-Itemproperty -path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ShowTaskViewButton" -Value 0 -Type DWord -Force
     Write-Host "STATUS: Windows 11 Task View has been disabled"
+
 }
