@@ -1,4 +1,5 @@
 #Last changed here: 2026-02-10
+#Simple Robocopy script to copy files and alert Syncro on error
 
 # Map network drive
 net use "\\FileShareHost\Backups\SomeFolderName" /USER:backupsusername password
