@@ -1,4 +1,5 @@
 #Last changed here: 2025-10-07
+#Description: Removes the search bar from the taskbar in Windows 11
 
 #Check if it is a valid computer (Win 11)
 if ((Get-WmiObject Win32_OperatingSystem).Caption -Match "Windows 11") {
@@ -22,4 +23,5 @@ if ($existingValue -eq 0) {
 } else {
     New-Itemproperty -path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" -Name "SearchBoxTaskbarMode" -Value 0 -Type DWord -Force
     Write-Host "STATUS: Windows 11 Search Bar has been disabled"
+
 }
