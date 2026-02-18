@@ -1,4 +1,5 @@
 #Last changed here: 2025-08-22
+#Installs Teams on Windows 11 PCs on an Azure Tenant
 
 $applicationName = "MSTeams"
 $installerFilename = "MSTeamsSetup.exe"
