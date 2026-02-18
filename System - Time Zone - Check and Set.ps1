@@ -1,4 +1,5 @@
 #Last changed here: 2024-12-19
+#Description: Set the time zone
 
 $currentTimeZone = (Get-TimeZone).Id
 
