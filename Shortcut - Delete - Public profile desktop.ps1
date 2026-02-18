@@ -1,4 +1,5 @@
 #Last changed here: 2025-12-15
+#Description: Deletes files, shortcuts, links off of the All Users desktop.  Used to clean up desktops cluttered up with legacy shortcuts.
 
 $FilenamesToDelete = @(
 'SomeFile.lnk',
