@@ -1,4 +1,11 @@
 #Last changed here: 2026-02-11
+#Installs network printers and deletes old ones.  This script gets the print drivers from a web server.  Print drivers can be bigger than the size allowed by Syncro, and this script
+#only downloads the drivers needed.  You will have to specify the .inf file for the print driver (usually only one, easy to find) and the name of the printer driver in the .inf, usually listed
+#at the top of the .inf.  The driver files should be saved on the web server as the same name as the printName variable + .zip, so "Some Printer Name.zip".  If the printer has more complex
+#settings than duplex, paper size and drawer settings, for instance, you can set up the printer on an initial PC, make all of the settings changes to the printer, then export out the printer
+#setting .xml file to also put on the web server to be downloaded and applied during the printer install.  The allowedWorstations variable actually matches the first part of the workstation name
+#so if you prefix your workstation names, such as "LAB-" or "FLOOR1-" you can just put that in the allowedWorkstations variable and it will install that printer on every workstation that
+#starts with those letters.
 
 $activePrinters = @(
     [pscustomobject]@{
