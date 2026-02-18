@@ -1,4 +1,5 @@
 #Last changed here: 2025-10-07
+#Description: Disabled Widgets in Windows 11.  This removes the Widgets button and flyout from the left side of the taskbar and removes the widgets that appear on the Windows login screen.
 
 #Check if it is a valid computer (Win 11)
 if ((Get-WmiObject Win32_OperatingSystem).Caption -Match "Windows 11") {
@@ -23,4 +24,5 @@ if ($existingValue -eq 0) {
 } else {
     New-Itemproperty -path "HKLM:\SOFTWARE\Policies\Microsoft\Dsh" -Name "AllowNewsAndInterests" -Value 0 -Type DWord -Force
     Write-Host "STATUS: Windows 11 Widgets have been disabled"
+
 }
