@@ -1,4 +1,5 @@
 #Last changed here: 2025-10-07
+#Description: Removes the Network section from the left hand tree in Windows Explorer
 
 #Check if it is a valid computer (Win 11)
 if ((Get-WmiObject Win32_OperatingSystem).Caption -Match "Windows 11") {
@@ -22,4 +23,5 @@ if ($existingValue -eq 0) {
 } else {
     New-Itemproperty -path "HKCU:\Software\Classes\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}" -Name "System.IsPinnedToNameSpaceTree" -Value 0 -Type DWord -Force
     Write-Host "STATUS: Windows 11 Explorer Network Icon has been disabled"
+
 }
