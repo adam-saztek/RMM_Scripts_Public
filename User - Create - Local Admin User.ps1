@@ -1,4 +1,6 @@
 #Last changed here: 2025-04-22
+#Description: Creates a local admin user on a workstation.  It get the password from a Syncro script variable.  If you change the password in Syncro it will change it on all of the workstations
+#on next run.
 
 Import-Module $env:SyncroModule
 
